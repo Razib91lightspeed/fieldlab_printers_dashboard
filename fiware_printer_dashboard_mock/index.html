@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,10 @@
 
     <header class="top-bar">
         <div class="brand">
-            <span class="brand-mark">FIWARE</span>
+            <div class="brand-logo" aria-label="FieldLab">
+                <span class="logo-field">Field</span><span class="logo-lab">Lab</span>
+                <span class="sr-only">FieldLab</span>
+            </div>
             <span class="brand-title">Lab Printer Command Center</span>
         </div>
         <div class="meta">
@@ -23,7 +25,7 @@
     </header>
 
     <main class="dashboard">
-        <section class="hero">
+<section class="hero">
             <div class="hero-copy">
                 <h1>Realtime Fleet Overview</h1>
                 <p id="summary" class="hero-summary"></p>
@@ -31,37 +33,7 @@
             <div class="kpi-grid" id="kpi-grid"></div>
         </section>
 
-        <section class="analytics">
-            <div class="panel">
-                <div class="panel-header">
-                    <h2>Fleet Status</h2>
-                    <span class="panel-sub">Usage distribution</span>
-                </div>
-                <div id="status-bars" class="bar-chart"></div>
-            </div>
-            <div class="panel">
-                <div class="panel-header">
-                    <h2>Authorization Split</h2>
-                    <span class="panel-sub">Printing jobs</span>
-                </div>
-                <div class="donut-wrap">
-                    <svg id="auth-donut" viewBox="0 0 160 160" class="donut" role="img" aria-label="Authorized vs unauthorized"></svg>
-                    <div class="donut-center">
-                        <div class="donut-value" id="auth-percent"></div>
-                        <div class="donut-label">Authorized</div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel wide">
-                <div class="panel-header">
-                    <h2>Weekly Throughput</h2>
-                    <span class="panel-sub">Completed jobs</span>
-                </div>
-                <div id="weekly-chart" class="line-chart"></div>
-            </div>
-        </section>
-
-        <section class="floor">
+<section class="floor">
             <div class="panel wide">
                 <div class="panel-header">
                     <h2>Printer Floor</h2>
@@ -75,6 +47,37 @@
                     <span class="panel-sub">Last 60 minutes</span>
                 </div>
                 <div id="alert-list" class="alert-list"></div>
+            </div>
+        </section>
+
+<section class="analytics">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Fleet Status</h2>
+                    <span class="panel-sub">Usage distribution</span>
+                </div>
+                <div id="status-bars" class="bar-chart"></div>
+            </div>
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Authorization Split</h2>
+                    <span class="panel-sub">Printing jobs</span>
+                </div>
+                <div class="donut-wrap">
+                    <svg id="auth-donut" viewBox="0 0 160 160" class="donut" role="img"
+                        aria-label="Authorized vs unauthorized"></svg>
+                    <div class="donut-center">
+                        <div class="donut-value" id="auth-percent"></div>
+                        <div class="donut-label">Authorized</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel wide">
+                <div class="panel-header">
+                    <h2>Weekly Throughput</h2>
+                    <span class="panel-sub">Completed jobs</span>
+                </div>
+                <div id="weekly-chart" class="line-chart"></div>
             </div>
         </section>
     </main>
